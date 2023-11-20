@@ -1,0 +1,39 @@
+create table unregistered_cars(
+     vin varchar(17) primary key,	
+     brand varchar(20) not null,
+     model varchar(30),
+     production_year int
+);
+
+
+INSERT INTO unregistered_cars (vin, brand, model, production_year)
+VALUES
+    ('WVW0123456789019', 'Volkswagen', 'Beetle', 1967),
+    ('1G1F11E1700099987', 'Ford', 'Mustang', 1969),
+    ('JM1GZ2W7600001607', 'Toyota', 'Corolla', 1970),
+    ('JN1AZ22E170001234', 'Nissan', 'Datsun 240Z', 1971),
+    ('3N1BN11E066012345', 'Honda', 'Civic', 1972),
+    ('WVW0123456789020', 'Volkswagen', 'Golf', 1974),
+    ('1G1F11E1800099987', 'Ford', 'Pinto', 1975),
+    ('JM1GZ2W7700001607', 'Toyota', 'Celica', 1976),
+    ('JN1AZ22E180001234', 'Nissan', 'Skyline', 1977),
+    ('3N1BN11E067012345', 'Honda', 'Accord', 1978),
+    ('WVW0123456789021', 'Volkswagen', 'Passat', 1979),
+    ('1G1F11E1900099987', 'Ford', 'Thunderbird', 1980),
+    ('JM1GZ2W7800001607', 'Toyota', 'Supra', 1981),
+    ('JN1AZ22E190001234', 'Nissan', 'Laurel', 1982),
+    ('3N1BN11E068012345', 'Honda', 'Prelude', 1983),
+    ('WVW0123456789022', 'Volkswagen', 'Jetta', 1984),
+    ('1G1F11E2000099987', 'Ford', 'Escort', 1985),
+    ('JM1GZ2W7900001607', 'Toyota', 'Camry', 1986),
+    ('JN1AZ22E200001234', 'Nissan', 'Maxima', 1987),
+    ('3N1BN11E069012345', 'Honda', 'Legend', 1988),
+    ('WVW0123456789023', 'Volkswagen', 'Cabriolet', 1989),
+    ('1G1F11E2100099987', 'Ford', 'Taurus', 1990),
+    ('JM1GZ2W8000001607', 'Toyota', 'Lexus LS400', 1991),
+    ('JN1AZ22E210001234', 'Nissan', '300ZX', 1992),
+    ('3N1BN11E070012345', 'Honda', 'NSX', 1993),
+    ('WVW0123456789024', 'Volkswagen', 'Corrado', 1994),
+    ('1G1F11E2200099987', 'Ford', 'Mustang', 1995),
+    ('JM1GZ2W8100001607', 'Toyota', 'RAV4', 1996),
+    ('JN1AZ22E220001234', 'Nissan', 'Altima', 1997);

@@ -1,0 +1,19 @@
+CREATE or REPLACE FUNCTION update_persons(personCNP text, newAddress text)
+returns int
+language plpgsql
+as
+$$
+declare
+	people_count INTEGER := 0;
+	myRecord RECORD;
+begin
+for myRecord in select * from persons
+	LOOP
+		if (myRecord.cnp = personCNP) then
+			UPDATE persons set adress = newAddress where cnp = myRecord.cnp;
+			people_count = people_count + 1;
+		end if;
+	end loop;
+    return people_count;
+end;
+$$;

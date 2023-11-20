@@ -1,0 +1,12 @@
+CREATE FUNCTION totalCarPrices()
+returns int
+language plpgsql
+as
+$$
+declare
+    total_price integer;
+begin
+    select sum(prices)  into total_price  from cars;
+     return total_price;
+end;
+$$;

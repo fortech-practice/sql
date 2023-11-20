@@ -1,0 +1,39 @@
+create table cars(
+     vin varchar(17) primary key,	
+     plate_number varchar(7) not null,
+     cnp_owner varchar(13) not null,
+     brand varchar(20) not null,
+     model varchar(30),
+     production_year int,	
+     registered boolean DEFAULT true,
+	 price int default 10000,
+     CONSTRAINT fk_car_owner
+         FOREIGN KEY(cnp_owner) 
+              REFERENCES persons(cnp)
+);
+
+
+INSERT INTO cars (vin, plate_number, cnp_owner, brand, model, production_year, registered, price)
+VALUES
+    ('WVW0123456789014', 'CJ01GHI', '1234567890123', 'Volkswagen', 'Tiguan', 2016, TRUE, 34000),
+    ('1G1F11E1200099987', 'B123ABC', '4567891234567', 'Ford', 'Mustang', 2017, FALSE, 75000),
+    ('JM1GZ2W7200001607', 'TM12IOI', '7890123456789', 'Toyota', 'Camry', 2018, TRUE, 34000),
+    ('JN1AZ22E130001234', 'BV11ION', '1122334455667', 'Nissan', 'Sentra', 2019, FALSE, 43000),
+    ('3N1BN11E062012345', 'PH12GHE', '2345678901234', 'Honda', 'Accord', 2020, TRUE, 24000),
+	('WVW0123456789015', 'CJ01JKL', '1234567890123', 'Volkswagen', 'Touareg', 2015, FALSE, 12000),
+    ('1G1F11E1300099987', 'B123VAS', '4567891234567', 'Ford', 'F150', 2016, TRUE, 11000),
+    ('JM1GZ2W7300001607', 'TM01AAA', '7890123456789', 'Toyota', 'Hilux', 2017, FALSE, 22000),
+    ('JN1AZ22E140001234', 'BV13DRN', '1122334455667', 'Nissan', 'Leaf', 2018, TRUE, 21000),
+    ('3N1BN11E063012345', 'PH17JDN', '2345678901234', 'Honda', 'Pilot', 2019, FALSE, 33000),
+    ('WVW0123456789016', 'CJ01MNO', '1234567890123', 'Volkswagen', 'Transporter', 2014, TRUE, 14500),
+    ('1G1F11E1400099987', 'B19FGD', '4567891234567', 'Ford', 'Explorer', 2015, FALSE, 12100),
+    ('JM1GZ2W7400001607', 'TM18SDD', '7890123456789', 'Toyota', 'Land Cruiser', 2016, TRUE, 11500),
+    ('JN1AZ22E150001234', 'BV11IDB', '1122334455667', 'Nissan', 'Rogue', 2017, FALSE, 12300),
+    ('3N1BN11E064012345', 'PH03FJD', '2345678901234', 'Honda', 'Odyssey', 2018, TRUE, 18200),
+    ('WVW0123456789017', 'CJ01PQR', '1234567890123', 'Volkswagen', 'Polo', 2013, FALSE, 8600),
+    ('1G1F11E1500099987', 'B198WES', '4567891234567', 'Ford', 'Escape', 2014, TRUE, 9600),
+    ('JM1GZ2W7500001607', 'TM22DFH', '7890123456789', 'Toyota', 'Sienna', 2015, FALSE, 8700),
+    ('JN1AZ22E160001234', 'BV99DJD', '1122334455667', 'Nissan', 'Kicks', 2016, TRUE, 7700),
+    ('3N1BN11E065012345', 'PH65FJD', '2345678901234', 'Honda', 'Insight', 2017, FALSE, 22000),
+    ('WVW0123456789018', 'CJ01STU', '1234567890123', 'Volkswagen', 'Up!', 2012, TRUE, 6300);
+	

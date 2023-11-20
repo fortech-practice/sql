@@ -1,0 +1,37 @@
+CREATE TABLE products (
+  product_id SERIAL,
+  product_name VARCHAR(255) NOT NULL,
+  product_description VARCHAR(255),	
+  product_long_description VARCHAR(255),	
+  unit_price DECIMAL(10,2) NOT NULL
+);
+
+
+INSERT INTO products (product_name, product_description, product_long_description, unit_price)
+VALUES
+('Phone', 'A smartphone with a cutting-edge camera and powerful processor', NULL, 500.00),
+('Tablet', 'A versatile tablet for work, play, and everything in between', NULL, 300.00),
+('Watch', NULL, NULL, 200.00),
+('Earbuds', 'Wireless earbuds with high-quality sound and a comfortable fit', 'These earbuds feature active noise cancellation, long battery life, and a compact charging case.', 100.00),
+('Desktop Computer', 'A powerful and versatile computer for home or office use', 'This desktop computer features a powerful processor, plenty of storage, and a large display.', 800.00),
+('Router', 'A high-performance router for reliable internet connectivity', 'This router provides fast and reliable wireless connectivity for your home or office.', 150.00),
+('Modem', 'A high-speed modem for connecting to your ISP', 'This modem provides fast and reliable internet connectivity for your home or office.', 100.00),
+('Printer', 'A high-quality printer for printing documents and photos', 'This printer produces high-quality prints at a low cost per page.', 120.00),
+('Scanner', 'A versatile scanner for scanning documents and photos', 'This scanner can scan documents, photos, and even receipts.', 80.00),
+('External Hard Drive', 'A portable hard drive for storing your data', 'This external hard drive provides extra storage space for your files, photos, and videos.', 60.00),
+('USB Flash Drive', 'A compact and portable USB flash drive for storing your data', 'This USB flash drive provides convenient storage for your files, photos, and videos.', 20.00),
+('Wireless Headphones', 'High-quality wireless headphones for listening to music and making calls', 'These wireless headphones provide excellent sound quality and a comfortable fit.', 180.00),
+('Wired Headphones', 'Affordable and durable wired headphones for listening to music', 'These wired headphones provide good sound quality at a low price.', 30.00),
+('Speakers', 'High-quality speakers for enjoying your music and movies', 'These speakers provide rich and immersive sound.', 100.00),
+('Soundbar', 'A slim and stylish soundbar for enhancing your TV sound', 'This soundbar provides clear and powerful sound for your TV.', 200.00),
+('Home Theater System', 'A complete home theater system for immersive surround sound', 'This home theater system provides a truly cinematic experience.', 500.00),
+('Television', 'A high-quality television for watching your favorite shows and movies', 'This television features a large screen, stunning picture quality, and smart TV features.', 400.00),
+('Projector', 'A versatile projector for watching movies, presentations, and more', 'This projector provides a large screen image for an immersive viewing experience.', 300.00),
+('Gaming Console', 'A powerful gaming console for playing the latest games', 'This gaming console provides high-performance gaming and access to a vast library of games.', 350.00),
+('Virtual Reality Headset', 'An immersive virtual reality headset for experiencing games, movies, and more', 'This virtual reality headset provides a truly immersive experience that will transport you to new worlds.', 400.00),
+('Smart Home Device', 'A versatile smart home device for controlling your home with voice commands', 'This smart home device can control lights, thermostats, locks, and more.', 50.00),
+('Security Camera', 'A high-quality security camera for monitoring your home or business', 'This security camera provides clear and detailed video footage.', 100.00),
+('Video Doorbell', 'A convenient and secure video doorbell for seeing who is at your door', 'This video doorbell allows you to see and speak to visitors from anywhere.', 200.00),
+('Smart Thermostat', 'A programmable smart thermostat for saving energy and improving comfort', 'This smart thermostat learns your temperature preferences and adjusts automatically.', 250.00),
+('Robotic Vacuum Cleaner', 'A convenient and efficient robotic vacuum cleaner for keeping your floors clean', 'This robotic vacuum cleaner cleans your floors automatically, even when you are not home.', 300.00),
+('Air Purifier', 'A high-performance air purifier for removing dust, pollen, and other allergens from your home', 'This air purifier improves the air quality in your home, making it easier to breathe.', 200.00);
